@@ -1,0 +1,92 @@
+body{
+    /* position: absolute; */
+    /* width: 90%; */
+    /* background-color: red; */
+    padding: 0;
+    margin: 0;
+}
+
+.vid-parent{
+    /* background-color: red; */
+    z-index: -1;
+}
+
+.vid-parent video{
+    /* position: relative;
+    top: 0;
+    right: 0; */
+    width: 100%;
+}
+
+.video-overlay{
+    position: absolute;
+    top: 35%;
+    left: 28%;
+    color: antiquewhite;
+}
+
+.container-fluid{
+    margin: 0 !important;
+    padding: 0 !important;
+    /* background-color: red; */
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+hr.style-three {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#student-3{
+    border-radius: 66% 34% 58% 42% / 78% 24% 76% 22% ;
+}
+
+#student-1{
+    border-radius: 68% 32% 35% 65% / 79% 74% 26% 21% ;
+}
+
+#student-2{
+    border-radius: 68% 32% 35% 65% / 27% 29% 71% 73%  ;
+}
+
+li.navbar-item:hover{
+    background-color: rgb(171, 97, 255) !important;
+}
+
+.navbar-dark .navbar-nav a.nav-link:hover {
+    color: #fff;
+}
+
+h1.display-4{
+    font-size: 40px;
+}
+
+a div{
+    color: black;
+}
+
+a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+h1.display-4.img-featured{
+    font-size: 4.0em !important;
+}
+
+button.add-btn{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: black !important;
+}
+
+div#offer{
+    clip-path: polygon(21% 0, 95% 0, 94% 100%, 19% 99%, 0% 50%);
+}

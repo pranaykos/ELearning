@@ -1,0 +1,22 @@
+a.btn-add{
+    position: fixed;
+    top: 500px;
+    right: 60px;
+    color: #ffffff;
+}
+
+a.lesson-add-button{
+    position: fixed;
+    right: 250px;
+    bottom: 200px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.lesson-add-button:hover{
+    color: white;
+}
+
+li.dropdown-item{
+    cursor: pointer;
+}
