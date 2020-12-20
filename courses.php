@@ -43,7 +43,7 @@
                     <div class="card my-4 border-light shadow p-3 mb-5 bg-white rounded" style="max-width: 540px;">
                         <div class="row no-gutters">
                             <div class="col-md-5">
-                                <img src="images/ml.jpg" width="200px" class="card-img" alt="...">
+                                <img src="<?=  str_replace("../", "", $mycourse->c_image) ?>" width="200px" class="card-img" alt="...">
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body pr-2 py-0 mt-0">

@@ -28,6 +28,28 @@ require_once("Database.php");
       return $row;
     }
 
+
+    // Get course By ID
+    public function getCourseNameById($id){
+      $this->db->query("SELECT courses.c_name FROM courses WHERE c_id = :id");
+
+      $this->db->bind(':id', $id);
+      
+      $row = $this->db->single();
+
+      return $row;
+    }
+
+    public function getCoursesOfUserByEmail($email){
+      $this->db->query("SELECT courses.c_id, courses.c_image ,courses.c_name, courses.c_desc FROM c_transactions JOIN courses ON c_transactions.course_id = courses.c_id WHERE c_transactions.email_id = :EMAIL");
+
+      $this->db->bind(":EMAIL", $email);
+
+      $row = $this->db->resultset();
+
+      return $row;
+    }
+
     // Get user By ID
     // public function getUserByUsername($username){
     //   $this->db->query("SELECT * FROM accounts WHERE username = :username");

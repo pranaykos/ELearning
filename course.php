@@ -15,7 +15,7 @@
 </div>
 
 <?php
-if (!empty(trim($_GET["cid"]))) {  
+if (!empty(trim($_GET["cid"]))) {
     $courseId = $_GET["cid"];
     $mycourse = $course->getCourseById($courseId);
 ?>
@@ -28,12 +28,12 @@ if (!empty(trim($_GET["cid"]))) {
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-primary"><strong>Course content</strong></li>
                     <?php
-                        $mylessons = $lesson->getLessonByCourseId($courseId);
-                        $count = 1;
-                        foreach($mylessons as $lesson){
-                             ?>
-                            <li class="list-group-item">Lesson - <?php echo $count++." : "  ?> <?= $lesson->l_name ?></li>
-                        <?php }
+                    $mylessons = $lesson->getLessonByCourseId($courseId);
+                    $count = 1;
+                    foreach ($mylessons as $lesson) {
+                    ?>
+                        <li class="list-group-item">Lesson - <?php echo $count++ . " : "  ?> <?= $lesson->l_name ?></li>
+                    <?php }
                     ?>
                 </ul>
             </div>
@@ -42,7 +42,7 @@ if (!empty(trim($_GET["cid"]))) {
                     <img src="images/course.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?= $mycourse->c_name ?></h5>
-                        <p class="card-text"> <?= substr($mycourse->c_desc, 0 ,170) ?></p>
+                        <p class="card-text"> <?= substr($mycourse->c_desc, 0, 170) ?></p>
                         <h3 class="my-0 mr-4 d-inline" style="text-decoration: line-through"><i class="fa fa-rupee-sign" aria-hidden="true"></i> <?= $mycourse->c_original_price ?>/-</h3>
                         <h3 class="my-0 d-inline text-danger"><i class="fa fa-rupee-sign" aria-hidden="true"></i> <?= $mycourse->c_selling_price ?>/-</h3>
                         <div class="d-inline bg-danger text-light p-3 ml-2 pl-3" id="offer"> Christmas offer</div>
@@ -61,7 +61,13 @@ if (!empty(trim($_GET["cid"]))) {
                             </div>
                         </div>
                     </div>
-                    <div class="row"><button type="button" class="btn btn-primary mx-3 btn-block">Buy Now</button></div>
+                    <div class="row">
+                        <form action="checkout.php" method="POST" class="">
+                            <input type="text" hidden name="price" value="<?= $mycourse->c_selling_price ?>">
+                            <input type="text" hidden name="cid" value="<?= $mycourse->c_id ?>">
+                            <button type="submit" class="btn btn-primary mx-3 btn-block">Buy Now</button>
+                        <form>
+                    </div>
                 </div>
             </div>
         </div>

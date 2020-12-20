@@ -32,9 +32,6 @@
       </li>
 
       <li class="nav-item  navbar-item">
-        <a class="nav-link" href="#">Feedback</a>
-      </li>
-      <li class="nav-item  navbar-item">
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>

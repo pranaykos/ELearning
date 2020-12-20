@@ -17,6 +17,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             session_start();
             $_SESSION["username"] = $myuser->username;
             $_SESSION["userid"] = $myuser->id;
+            $_SESSION["email"] = $myuser->email;
             $_SESSION["isLoggedIn"] = true;
             echo json_encode("OK");
             exit;
