@@ -1,7 +1,18 @@
 <?php session_start() ?>
 
 <?php
-// echo var_dump($_SESSION)
+
+include "database/Objects.php";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_REQUEST["submitquery"])) {
+    $data["question"] = $_REQUEST["question"];
+    $data["name"] = $_REQUEST["name"];
+    $data["email"] = $_REQUEST["email"];
+    if ($Enquiry->addQuestion($data)) {
+        $message = "Your query has been submitted, soon we will get in touch with you";
+    }
+}
+
 ?>
 
 <?php include "partials/_header.php"; ?>
@@ -21,6 +32,18 @@ if (isset($_GET["success"])) {
                     </button>
                 </div>';
 }
+?>
+
+<?php
+if (isset($message)) {
+    echo '<div class="alert my-0 signup-success alert-success alert-dismissible fade show"      role="alert">
+        <strong class="ml-4">Success!</strong> '.$message.'.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>';
+}
+
 ?>
 
 <!-- start of video play -->
@@ -78,7 +101,7 @@ if (isset($_GET["success"])) {
                 </div>
             </div>
         </div>
-        
+
         <div class="col-sm-3">
             <div class="text-center py-4">
                 <div>
@@ -121,7 +144,7 @@ if (isset($_GET["success"])) {
             <p>The courses we provide is for everyone one can start from simple certification then after that can go for gratuation program and finally can do masters with us</p>
         </div>
         <div class="col-sm-4 offset-sm-1">
-            <h1 class="display-1">dad</h1>
+            <img width="300px" class="rounded-pill" src="images/featured-2.jpg" alt="">
         </div>
     </div>
 </div>
@@ -180,28 +203,31 @@ if (isset($_GET["success"])) {
     <h1 class="display-4 text-center my-3">Conatct us</h1>
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
-            <form>
+            <form action="" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <input type="email" class="form-control" id="inputEmail4" name="email">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Name</label>
-                        <input type="text" class="form-control" id="inputPassword4">
+                        <input type="text" class="form-control" id="inputPassword4" name="name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Ask your question</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="question" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit your query</button>
+                <button type="submit" name="submitquery" class="btn btn-primary">Submit your query</button>
             </form>
         </div>
     </div>
 </div>
 <!-- end of contact us -->
 
+<script>
+    document.querySelector("title").innerText = "ELearning - best online learning platform";
+</script>
 
 <!-- start including all the modals -->
 <?php

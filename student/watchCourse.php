@@ -1,5 +1,11 @@
-<?php session_start();
-include "../database/Objects.php";
+<?php
+    session_start();
+    if(!isset($_SESSION["username"]) || !isset($_SESSION["userid"]) || !isset($_SESSION["email"]) || !isset($_SESSION["isLoggedIn"])){
+        header("location:../index.php");
+    }
+?>
+
+<?php include "../database/Objects.php";
 
 if (!isset($_REQUEST["cid"])) {
     header("location:../index.php");

@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION["adminusername"]) || !isset($_SESSION["isAdminLoggedIn"]) || !isset($_SESSION["adminLoginId"])){
+    header("location:../index.php");
+}
+
 include "../database/AObjects.php";
 
 

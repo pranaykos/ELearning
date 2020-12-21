@@ -1,7 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["username"]) || !isset($_SESSION["userid"]) || !isset($_SESSION["email"]) || !isset($_SESSION["isLoggedIn"])){
+        header("location:../index.php");
+    }
+?>
+
 <?php include "../partials/_header.php"; ?>
 
-<?php session_start(); 
-include "../database/AObjects.php";?>
+<?php include "../database/AObjects.php";?>
 
 <?php
     if(isset($_REQUEST["updatebtn"]) && $_SERVER["REQUEST_METHOD"] === "POST"){

@@ -1,5 +1,14 @@
+<?php session_start() ?>
+
+<?php
+    if(!isset($_SESSION["adminusername"]) || !isset($_SESSION["isAdminLoggedIn"]) || !isset($_SESSION["adminLoginId"])){
+        header("location:../index.php");
+    }
+?>
+
+
 <?php 
-    session_start();
+    
     if(isset($_SESSION["adminusername"]) && $_SESSION["isAdminLoggedIn"]){
 
     }else{

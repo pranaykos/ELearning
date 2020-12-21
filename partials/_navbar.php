@@ -28,7 +28,7 @@
       <?php } ?>
 
       <li class="nav-item  navbar-item">
-        <a class="nav-link" href="#">Payment status</a>
+        <a class="nav-link" href="paymentStatus.php">Payment status</a>
       </li>
 
       <li class="nav-item  navbar-item">

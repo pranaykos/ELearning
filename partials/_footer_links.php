@@ -9,10 +9,8 @@
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.</p>
+                <h6 class="text-uppercase mb-4 font-weight-bold">VSchools</h6>
+                <p>VSchools aims at providing high quality education with cost as low as possible.</p>
             </div>
             <!-- Grid column -->
 
@@ -20,18 +18,18 @@
 
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                <h6 class="text-uppercase mb-4 font-weight-bold">Catagories</h6>
                 <p>
-                    <a href="#!">MDBootstrap</a>
+                    <a href="#!">Computer Science</a>
                 </p>
                 <p>
-                    <a href="#!">MDWordPress</a>
+                    <a href="#!">Digital marketing</a>
                 </p>
                 <p>
-                    <a href="#!">BrandFlow</a>
+                    <a href="#!">Music thoery</a>
                 </p>
                 <p>
-                    <a href="#!">Bootstrap Angular</a>
+                    <a href="#!">Management</a>
                 </p>
             </div>
             <!-- Grid column -->
@@ -42,23 +40,23 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
                 <p>
-                    <a href="#!">Your Account</a>
+                    <a href="#!">Courses</a>
                 </p>
                 <p>
-                    <a href="#!">Become an Affiliate</a>
+                    <a href="#!">Payment status</a>
                 </p>
                 <p>
-                    <a href="#!">Shipping Rates</a>
+                    <a href="#!">Contact</a>
                 </p>
-                <p>
+                <p class="text-primary" style="cursor: pointer">
                     <?php
                     // if(isset($_SESSION["adminusername"]) && $_SESSION["isAdminLoggedIn"]){
                     if (isset($_SESSION["isAdminLoggedIn"]) &&  $_SESSION["isAdminLoggedIn"]) {
-                        echo '<a class="btn" href="logout.php">
+                        echo '<a href="logout.php">
                                 Logout ' . $_SESSION["adminusername"] . '
                             </a>';
                     } else {
-                        echo '<a class="btn" data-toggle="modal"          
+                        echo '<a data-toggle="modal"          
                                 data-target="#adminloginmodal">
                                 Admin Login
                             </a>';
@@ -74,13 +72,13 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
                 <p>
-                    <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <i class="fas fa-home mr-3"></i> 182  Holt Street, Florida, US</p>
                 <p>
-                    <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                    <i class="fas fa-envelope mr-3"></i> email@mail.com</p>
                 <p>
-                    <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <i class="fas fa-phone mr-3"></i> + 01 561-306-0073</p>
                 <p>
-                    <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                    <i class="fas fa-print mr-3"></i> + 01 904-583-4893</p>
             </div>
             <!-- Grid column -->
 

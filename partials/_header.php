@@ -19,7 +19,7 @@
     <!-- <link rel="stylesheet" href="/css/styles.css"> -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <title>Hello, world!</title>
+    <title>ELearning - best online learning platform</title>
 </head>
 
 <body>

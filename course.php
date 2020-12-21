@@ -62,7 +62,7 @@ if (!empty(trim($_GET["cid"]))) {
                         </div>
                     </div>
                     <div class="row">
-                        <form action="checkout.php" method="POST" class="">
+                        <form action="checkout.php" method="POST">
                             <input type="text" hidden name="price" value="<?= $mycourse->c_selling_price ?>">
                             <input type="text" hidden name="cid" value="<?= $mycourse->c_id ?>">
                             <button type="submit" class="btn btn-primary mx-3 btn-block">Buy Now</button>

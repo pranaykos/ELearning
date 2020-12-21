@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="styles.css">
 
-    <title>Hello, world!</title>
+    <title>ELearning - best online learning platform</title>
   </head>
   <body>
     

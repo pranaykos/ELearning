@@ -65,9 +65,9 @@ require_once("Database.php");
       }
     }
 
-    // public function getCoursesCount(){
-    //   return $this->db->rowCount();
-    // }
+    public function getTransactionCount(){
+      return $this->db->rowCount();
+    }
 
     // public function doesUserExist($username){
     //   $this->getUserByUsername($username);

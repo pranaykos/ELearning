@@ -1,7 +1,16 @@
+<?php session_start() ?>
+
+<?php
+    if(!isset($_SESSION["adminusername"]) || !isset($_SESSION["isAdminLoggedIn"]) || !isset($_SESSION["adminLoginId"])){
+        header("location:../index.php");
+    }
+?>
+
+
 <?php include("partials/_header.php"); ?>
 
 <?php include "../database/AObjects.php";
-session_start(); 
+
 
 unset($_SESSION["cid_lesson_add"]);
 

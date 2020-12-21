@@ -1,13 +1,17 @@
 <?php
-
-session_start();
+    session_start();
+    if(!isset($_SESSION["username"]) || !isset($_SESSION["userid"]) || !isset($_SESSION["email"]) || !isset($_SESSION["isLoggedIn"])){
+        header("location:loginregister.php");
+        exit();
+    }
 ?>
 
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     // The request is using the POST method
-    header("location:index.php");
+    echo "not post";
+    // header("location:index.php");
     exit();
 } else if (isset($_SESSION["isLoggedIn"]) && isset($_SESSION["email"])) {
     
@@ -89,6 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 
 } else {
+    echo "it is get";
     header("location:index.php");
     exit();
 }
