@@ -49,6 +49,7 @@ if (isset($message)) {
 <!-- start of video play -->
 <div class="container-fluid">
     <div class="vid-parent">
+        <!-- <img src="images/featured.jpg" width="1363px" height="570px" alt=""> -->
         <video playsinline autoplay muted loop clsss="video">
             <source src="videos/featureVideo.mp4" type="video/mp4">
         </video>
